@@ -1,0 +1,37 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.card {
+	box-sizing: border-box;
+	min-width: 300px;
+	padding: 20px;
+	margin: 20px;
+	overflow: hidden;
+	color: $card-color;
+	background-color: $card-background;
+	border: 1px solid $card-border;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+}
+
+@include mobile {
+	.card {
+		box-sizing: content-box;
+		width: 100%;
+		max-width: 450px;
+	}
+}
+
+@include tablet {
+	.card {
+		box-sizing: content-box;
+		width: 300px;
+	}
+}
+
+@include desktop {
+	.card {
+		box-sizing: content-box;
+		width: 300px;
+	}
+}
