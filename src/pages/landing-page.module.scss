@@ -31,7 +31,7 @@
 	@include flex(column, center, center);
 }
 
-.screen:nth-child(2) {
+.screen:nth-of-type(2) {
 	background-color: $screen-background-light;
 }
 
