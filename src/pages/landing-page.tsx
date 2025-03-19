@@ -7,10 +7,7 @@ import styles from './landing-page.module.scss';
 export function LandingPage() {
 	const cards: ICard[] = [
 		{ title: 'Карточка 1', content: 'Пустота' },
-		{
-			title: 'Карточка 2',
-			content: 'Пустота',
-		},
+		{ title: 'Карточка 2', content: 'Пустота' },
 	];
 
 	return (
