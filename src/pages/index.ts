@@ -1,2 +1,2 @@
-export { MainPage } from './main/main';
-export { RandomPostPage } from './random-post/random-post';
+export { MainPage } from './main/index';
+export { RandomPostPage } from './random-post/index';

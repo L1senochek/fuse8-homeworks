@@ -1,4 +1,4 @@
-import { IRoutes } from '@shared/types/types.ts';
+import { IRoutes } from '@shared/types/types';
 
 export const routes: IRoutes = {
 	main: {

@@ -26,10 +26,8 @@
 		"baseUrl": "./src",
 		"paths": {
 			"@app/*": ["./app/*"],
-			"@routes/*": ["./routes/*"],
 			"@pages/*": ["./pages/*"],
 			"@public/*": ["../public/*"],
-			"@assets/*": ["./assets/*"],
 			"@shared/*": ["./shared/*"]
 		}
   },

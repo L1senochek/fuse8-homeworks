@@ -1,13 +1,16 @@
-import React from 'react';
+import { NavParams } from '@shared/ui/nav/types';
 import { NavLink } from 'react-router';
 
 import styles from './nav.module.scss';
-import { NavProps } from '@shared/types/types.ts';
 
-const Nav: React.FC<NavProps> = ({ props }) => {
+interface NavProps {
+	params: NavParams[];
+}
+
+export const Nav = ({ params }: NavProps) => {
 	return (
 		<nav className={styles.nav}>
-			{props.map((param) => (
+			{params.map((param) => (
 				<NavLink key={param.href} className={styles.navLink} to={param.href}>
 					{param.title}
 				</NavLink>
@@ -15,5 +18,3 @@ const Nav: React.FC<NavProps> = ({ props }) => {
 		</nav>
 	);
 };
-
-export default Nav;

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Post } from '@shared/types/types.ts';
-import { fetchPost } from '@shared/api/fetch-post.ts';
+import { fetchPost } from '@shared/api/fetch-post';
+import { Post } from '@shared/api/types';
 
 export const useFetchPost = (postNumber: number) => {
 	const [isLoading, setIsLoading] = useState(false);
@@ -20,7 +20,7 @@ export const useFetchPost = (postNumber: number) => {
 			}
 		};
 
-		if (postNumber) void fetchRandomPost();
+		if (postNumber) fetchRandomPost();
 	}, [postNumber]);
 
 	return { isLoading, post };

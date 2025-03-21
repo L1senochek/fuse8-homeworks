@@ -1,5 +1,5 @@
+import { Post } from '@shared/api/types.ts';
 import { fetcher } from '@shared/services/request.ts';
-import { Post } from '@shared/types/types.ts';
 
 export const fetchPost = async (id: number) => {
 	try {

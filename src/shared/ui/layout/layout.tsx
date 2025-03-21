@@ -1,11 +1,11 @@
-import React, { PropsWithChildren, ReactElement } from 'react';
-import { NavParams } from '@shared/types/types.ts';
-import Nav from '@shared/ui/nav.tsx';
-import { routes } from '@shared/services/routes.ts';
+import { ReactNode } from 'react';
+import { routes } from '@shared/services/routes';
+import { Nav } from '@shared/ui/nav';
+import { NavParams } from '@shared/ui/nav/types';
 
 import styles from './layout.module.scss';
 
-export const Layout: React.FC<PropsWithChildren> = ({ children }): ReactElement => {
+export const Layout = ({ children }: { children: ReactNode }) => {
 	const navParams: NavParams[] = [
 		{ title: 'Главная', href: routes.main.getLink() },
 		{ title: 'Рандомный пост', href: routes.randomPost.getLink() },
@@ -15,7 +15,7 @@ export const Layout: React.FC<PropsWithChildren> = ({ children }): ReactElement 
 		<>
 			<header className={styles.header}>
 				<div className={styles.container}>
-					<Nav props={navParams} />
+					<Nav params={navParams} />
 				</div>
 			</header>
 			<main className={styles.main}>

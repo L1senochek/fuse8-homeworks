@@ -1,5 +1,5 @@
+import { BASE_URL } from '@shared/helpers/constants';
 import axios from 'axios';
-import { BASE_URL } from '@shared/helpers/constants.ts';
 
 export const fetcher = axios.create({
 	baseURL: BASE_URL,

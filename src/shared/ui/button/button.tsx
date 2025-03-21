@@ -1,9 +1,16 @@
-import { ButtonProps } from '@shared/types/types.ts';
-import React from 'react';
+import { ReactNode } from 'react';
 
 import styles from './button.module.scss';
 
-export const Button: React.FC<ButtonProps> = (props) => {
+export interface ButtonProps {
+	type?: 'button' | 'submit' | 'reset';
+	className?: string;
+	disabled?: boolean;
+	onClick?: () => void;
+	children?: ReactNode;
+}
+
+export const Button = (props: ButtonProps) => {
 	const { className = '', children, type = 'button', onClick, disabled = false } = props;
 	return (
 		<button

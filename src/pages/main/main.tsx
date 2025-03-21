@@ -1,5 +1,3 @@
-import React from 'react';
-
-export const MainPage: React.FC = () => {
+export const MainPage = () => {
 	return <h1>Главная страница</h1>;
 };

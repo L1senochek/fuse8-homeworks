@@ -12,8 +12,8 @@ createRoot(document.getElementById('root')!).render(
 		<BrowserRouter>
 			<Layout>
 				<Routes>
-					<Route path={routes.main.getLink()} element={<MainPage />} />
-					<Route path={routes.randomPost.getLink()} element={<RandomPostPage />} />
+					<Route path={routes.main.pathname} element={<MainPage />} />
+					<Route path={routes.randomPost.pathname} element={<RandomPostPage />} />
 				</Routes>
 			</Layout>
 		</BrowserRouter>
