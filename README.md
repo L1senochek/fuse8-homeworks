@@ -7,6 +7,6 @@
 ``npm run dev``
 
 ## Документация проекта
-:pencil2: [Описание задания](.docs/task-description.md)
+:pencil2: [Описание задания](.docs/task-description-lesson-2)
 
 :wrench: [Используемые технологии](.docs/technologies.md)
