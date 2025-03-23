@@ -1,7 +1,6 @@
 import { ReactNode } from 'react';
 import { routes } from '@shared/services/routes';
-import { Nav } from '@shared/ui/nav';
-import { NavParams } from '@shared/ui/nav/types';
+import { Nav, NavParams } from '@shared/ui/nav';
 
 import styles from './layout.module.scss';
 

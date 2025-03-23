@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "tsc -b && vite",
+		"type-check": "tsc --noEmit",
+    "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
