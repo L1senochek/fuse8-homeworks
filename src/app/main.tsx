@@ -1,8 +1,9 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import { LandingPage } from '@pages/landing-page';
 import { MainPage } from '@pages/main';
 import { RandomPostPage } from '@pages/random-post';
-import { routes } from '@shared/services/routes.ts';
+import { routes } from '@shared/index';
 import { Layout } from '@shared/ui';
 import { BrowserRouter, Route, Routes } from 'react-router';
 
@@ -15,6 +16,7 @@ createRoot(document.getElementById('root')!).render(
 				<Routes>
 					<Route path={routes.main.pathname} element={<MainPage />} />
 					<Route path={routes.randomPost.pathname} element={<RandomPostPage />} />
+					<Route path={routes.landing.pathname} element={<LandingPage />} />
 				</Routes>
 			</Layout>
 		</BrowserRouter>

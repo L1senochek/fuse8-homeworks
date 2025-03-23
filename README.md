@@ -1,4 +1,4 @@
-# Lesson 2
+# Fuse8 Homeworks
 
 ## Установка
 ``npm install``
@@ -7,6 +7,14 @@
 ``npm run dev``
 
 ## Документация проекта
-:pencil2: [Описание задания](.docs/task-description-lesson-2)
 
 :wrench: [Используемые технологии](.docs/technologies.md)
+
+### Lesson 2
+
+:pencil2: [Описание задания](.docs/task-description-lesson-2)
+
+### Lesson 3
+
+:pencil2: [Описание задания](.docs/task-description-lesson-3)
+

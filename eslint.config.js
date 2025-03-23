@@ -6,6 +6,7 @@ import tseslint from 'typescript-eslint';
 import importPlugin from 'eslint-plugin-import';
 import sortExports from 'eslint-plugin-sort-exports';
 import eslintPluginPrettier from 'eslint-plugin-prettier/recommended';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
 
 export default tseslint.config(
 	{ ignores: ['dist'] },
@@ -21,6 +22,7 @@ export default tseslint.config(
 			'react-hooks': reactHooks,
 			'react-refresh': reactRefresh,
 			'sort-exports': sortExports,
+			'jsx-a11y': jsxA11y,
 		},
 		rules: {
 			...reactHooks.configs.recommended.rules,
@@ -30,6 +32,7 @@ export default tseslint.config(
 			'import/no-default-export': 'off',
 			'import/named': 'off',
 			'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+			'jsx-a11y/alt-text': 'error',
 			'sort-exports/sort-exports': [
 				'error',
 				{
@@ -82,5 +85,6 @@ export default tseslint.config(
 				},
 			],
 		},
+		ignores: ['./src/App.tsx', 'index.html'],
 	},
 );

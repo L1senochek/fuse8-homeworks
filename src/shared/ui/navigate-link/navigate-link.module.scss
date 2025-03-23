@@ -1,0 +1,26 @@
+@use '../styles/mixins' as *;
+@use '../styles/variables' as *;
+
+.link {
+	@include flex(row, center, center);
+
+	gap: 5px;
+	padding: 10px 20px;
+	margin-top: 10px;
+	font-size: 1rem;
+	color: $navigate-link-color;
+	text-decoration: none;
+	cursor: pointer;
+	background-color: $navigate-link-background;
+	border-radius: 8px;
+	transition: box-shadow 0.2s;
+
+	&:hover {
+		color: $navigate-link-color;
+		box-shadow: 0 0 2px 2px $navigate-link-shadow;
+	}
+
+	&:active {
+		opacity: 0.8;
+	}
+}

@@ -1,0 +1,90 @@
+@use '../../shared/ui/styles/mixins' as *;
+@use '../../shared/ui/styles/variables' as *;
+
+.example-homework {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+	font-family: Arial, sans-serif;
+	color: $card-color;
+	background-color: $card-background;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	white-space: nowrap;
+	border: 0;
+	clip: rect(0 0 0 0);
+	clip-path: inset(100%);
+}
+
+.screen {
+	box-sizing: border-box;
+	width: 100vw;
+	height: 100vh;
+	padding: 20px;
+	text-align: center;
+	@include flex(column, center, center);
+}
+
+.screen:nth-of-type(2) {
+	background-color: $screen-background-light;
+}
+
+.block {
+	box-sizing: border-box;
+	width: 100vw;
+	max-width: 100%;
+	height: 100vh;
+	padding: 20px;
+	text-align: center;
+	@include flex(column, center, center);
+}
+
+.heading-h2 {
+	margin: 0.83em 0;
+}
+
+.heading-h3 {
+	margin: 1.17em 0;
+}
+
+.heading-h5 {
+	margin: 1.67em 0;
+}
+
+.paragraph {
+	margin: 1em 0;
+}
+
+.cards-container {
+	gap: 20px;
+}
+
+@include mobile {
+	.cards-container {
+		@include flex(column, center, center);
+	}
+}
+
+@include tablet {
+	.cards-container {
+		@include flex(row, center);
+
+		flex-wrap: wrap;
+	}
+}
+
+@include desktop {
+	.cards-container {
+		@include flex(row, center);
+
+		flex-wrap: wrap;
+	}
+}

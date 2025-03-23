@@ -8,6 +8,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
 	const navParams: NavParams[] = [
 		{ title: 'Главная', href: routes.main.getLink() },
 		{ title: 'Рандомный пост', href: routes.randomPost.getLink() },
+		{ title: 'Лендинг', href: routes.landing.getLink() },
 	];
 
 	return (
