@@ -12,6 +12,14 @@
 	border: 1px solid $card-border;
 	border-radius: 8px;
 	box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+
+	&-title {
+		margin: 1.33em 0;
+	}
+
+	&-paragraph {
+		margin: 1em 0;
+	}
 }
 
 @include mobile {

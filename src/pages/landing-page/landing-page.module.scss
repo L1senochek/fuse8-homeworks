@@ -7,6 +7,8 @@
 	margin: 0;
 	overflow-x: hidden;
 	font-family: Arial, sans-serif;
+	color: $card-color;
+	background-color: $card-background;
 }
 
 .visually-hidden {
@@ -43,6 +45,22 @@
 	padding: 20px;
 	text-align: center;
 	@include flex(column, center, center);
+}
+
+.heading-h2 {
+	margin: 0.83em 0;
+}
+
+.heading-h3 {
+	margin: 1.17em 0;
+}
+
+.heading-h5 {
+	margin: 1.67em 0;
+}
+
+.paragraph {
+	margin: 1em 0;
 }
 
 .cards-container {

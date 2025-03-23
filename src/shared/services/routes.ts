@@ -10,7 +10,7 @@ export const routes: IRoutes = {
 		pathname: '/random-post',
 	},
 	landing: {
-		pathname: '/landing',
 		getLink: () => '/landing',
+		pathname: '/landing',
 	},
 };

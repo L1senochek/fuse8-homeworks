@@ -1,5 +1,6 @@
 import { ReactElement } from 'react';
-import { ICard } from '@shared/types.ts';
+
+import { ICard } from './types';
 
 import styles from './card.module.scss';
 
@@ -10,8 +11,8 @@ interface CardProps {
 export function Card({ card }: CardProps): ReactElement {
 	return (
 		<div className={styles.card}>
-			<h4>{card.title}</h4>
-			<p>{card.content}</p>
+			<h4 className={styles['card-title']}>{card.title}</h4>
+			<p className={styles['card-paragraph']}>{card.content}</p>
 		</div>
 	);
 }

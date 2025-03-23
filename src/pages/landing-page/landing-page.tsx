@@ -1,6 +1,4 @@
-import { Card, ICard, Input, NavigateLink } from '@shared/index';
-import { AlertIcon } from '@shared/ui/alert-icon.tsx';
-import { VisibilityIcon } from '@shared/ui/visibility-icon.tsx';
+import { AlertIcon, Card, ICard, Input, NavigateLink, VisibilityIcon } from '@shared/ui';
 
 import styles from './landing-page.module.scss';
 
@@ -14,14 +12,14 @@ export function LandingPage() {
 		<div className={styles['example-homework']}>
 			<h1 className={styles['visually-hidden']}>Урок 3</h1>
 			<div className={styles.screen}>
-				<h2>Интересные факты про эту страницу</h2>
-				<p>В ней нет смысла</p>
+				<h2 className={styles['heading-h2']}>Интересные факты про эту страницу</h2>
+				<p className={styles.paragraph}>В ней нет смысла</p>
 				<NavigateLink to={'#second-screen'}>
 					Перейти дальше <VisibilityIcon />
 				</NavigateLink>
 			</div>
 			<div className={styles.screen} id={'second-screen'}>
-				<h3>Смотрите какие карточки</h3>
+				<h3 className={styles['heading-h3']}>Смотрите какие карточки</h3>
 				<div className={styles['cards-container']}>
 					{cards.map((card) => (
 						<Card card={card} key={card.title} />
@@ -29,7 +27,7 @@ export function LandingPage() {
 				</div>
 			</div>
 			<div className={styles.block}>
-				<h5>Интерактив?</h5>
+				<h5 className={styles['heading-h5']}>Интерактив?</h5>
 				<Input type={'text'} placeholder={'Напишите тут что-нибудь'} />
 				<NavigateLink to={'#'}>
 					Вывести текст в alert <AlertIcon />
