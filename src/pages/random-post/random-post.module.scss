@@ -1,0 +1,28 @@
+.post {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	align-items: center;
+	max-width: 800px;
+	font-size: 1.2em;
+
+	&Header {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		align-items: center;
+	}
+
+	&Article {
+		min-height: 80px;
+	}
+
+	&Text {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 10px;
+		border: 1px solid rgb(255 255 255 / 87%);
+		border-radius: 8px;
+	}
+}
