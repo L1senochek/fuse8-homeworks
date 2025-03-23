@@ -1,0 +1,25 @@
+.button {
+	padding: 0.6em 1.2em;
+	font-family: inherit;
+	font-size: 1.2em;
+	font-weight: 500;
+	color: rgb(255 255 255 / 87%);
+	cursor: pointer;
+	background-color: #1A1A1A;
+	border: 1px solid rgb(255 255 255 / 87%);
+	border-radius: 8px;
+	transition:
+		border-color 0.25s,
+		box-shadow 0.25s;
+
+	&:hover {
+		border-color: #0FF;
+		box-shadow: 0 0 15px 1px #0FF;
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+		box-shadow: none;
+		opacity: 0.5;
+	}
+}

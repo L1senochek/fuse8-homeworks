@@ -1,9 +1,13 @@
-import { IRoutes } from '../types.ts';
+import { IRoutes } from '@shared/types/types';
 
 export const routes: IRoutes = {
 	main: {
-		pathname: '/',
 		getLink: () => '/',
+		pathname: '/',
+	},
+	randomPost: {
+		getLink: () => '/random-post',
+		pathname: '/random-post',
 	},
 	landing: {
 		pathname: '/landing',
