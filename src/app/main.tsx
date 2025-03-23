@@ -1,6 +1,6 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { LandingPage } from '@pages/landing-page.tsx';
+import { LandingPage } from '@pages/landing-page';
 import { routes } from '@shared/index';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router';
 
@@ -10,8 +10,8 @@ createRoot(document.getElementById('root')!).render(
 	<StrictMode>
 		<BrowserRouter>
 			<Routes>
-				<Route path={routes.main.getLink()} element={<Navigate to={routes.landing.getLink()} />} />
-				<Route path={routes.landing.getLink()} element={<LandingPage />} />
+				<Route path={routes.main.pathname} element={<Navigate to={routes.landing.getLink()} />} />
+				<Route path={routes.landing.pathname} element={<LandingPage />} />
 			</Routes>
 		</BrowserRouter>
 	</StrictMode>,

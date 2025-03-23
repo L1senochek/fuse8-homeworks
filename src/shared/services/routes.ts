@@ -2,11 +2,11 @@ import { IRoutes } from '../types.ts';
 
 export const routes: IRoutes = {
 	main: {
-		path: '/',
+		pathname: '/',
 		getLink: () => '/',
 	},
 	landing: {
-		path: '/landing',
+		pathname: '/landing',
 		getLink: () => '/landing',
 	},
 };

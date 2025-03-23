@@ -1,5 +1,5 @@
 export interface IRoute {
-	path: string;
+	pathname: string;
 	getLink: (segment?: string) => string;
 }
 
