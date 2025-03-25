@@ -10,6 +10,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
 		{ title: 'Главная', href: routes.main.getLink() },
 		{ title: 'Рандомный пост', href: routes.randomPost.getLink() },
 		{ title: 'Лендинг', href: routes.landing.getLink() },
+		{ title: 'Навигация', href: routes.navigation.getLink() },
 	];
 
 	const location = useLocation();
