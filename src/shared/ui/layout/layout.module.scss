@@ -1,3 +1,5 @@
+@use "../styles/variables" as *;
+
 .container {
 	display: flex;
 	justify-content: center;
@@ -6,6 +8,26 @@
 .header {
 	.container {
 		padding: 20px;
+	}
+
+	&Landing {
+		position: relative;
+		background-color: transparent;
+		display: flex;
+		justify-content: center;
+
+		.container {
+			position: absolute;
+			padding: 20px;
+		}
+
+		& [class*='navLink'] {
+			color: $nav-color-light;
+
+			&[class*="active"] {
+				color: $nav-active-color-light;
+			}
+		}
 	}
 }
 
