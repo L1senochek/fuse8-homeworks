@@ -12,11 +12,11 @@ export function ArticlesPage() {
 	});
 
 	function content() {
-		if (isLoading) return <span>Loading...</span>;
-		if (!data) return <span>Loading failed</span>;
+		if (isLoading) return <span className={styles['articles-message']}>Loading...</span>;
+		if (!data) return <span className={styles['articles-message']}>Loading failed</span>;
 		if (!data.length)
 			return (
-				<p>
+				<p className={styles['articles-message']}>
 					No articles.{' '}
 					<Link className={styles.link} to={'/article'}>
 						Create first
@@ -35,7 +35,7 @@ export function ArticlesPage() {
 
 	return (
 		<>
-			<h2>Articles</h2>
+			<h1 className={styles['articles-title']}>Articles</h1>
 			<div className={styles['articles-list']}>{content()}</div>
 		</>
 	);
