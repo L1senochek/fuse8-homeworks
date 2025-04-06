@@ -1,5 +1,6 @@
 import { articleAPI } from '@shared/api/article-api';
 import { Article } from '@shared/api/types';
+import { capitalize } from '@shared/helpers/functions';
 import { Button } from '@shared/ui';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import cl from 'classnames';
@@ -29,7 +30,10 @@ export function ArticleCard({ article }: { article: Article }) {
 				'isNew' in article.content && article.content.isNew && styles['is-new'],
 			)}
 		>
-			<h3 className={styles.articleTitle}>{article.title}</h3>
+			<h2 className={styles['article-title']}>
+				{article.title}{' '}
+				<span className={styles['article-status']}>{capitalize(article.content.type)}</span>
+			</h2>
 			<div className={styles.articleContent}>
 				<p className={styles.articleDescription}>
 					{'description' in article.content && article.content.description}
