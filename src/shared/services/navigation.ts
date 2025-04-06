@@ -1,4 +1,4 @@
-import { Navigation, NavigationRoutes } from '@shared/types/types';
+import { Navigation, NavigationRoutes } from '../helpers/types';
 
 const USER_READ_PERMISSIONS = ['vacancies', 'users', 'candidates', 'clients', 'partners'];
 

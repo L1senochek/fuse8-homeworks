@@ -1,23 +1,21 @@
 @use "../../../shared/ui/styles/variables" as *;
 
 .navigation {
-	&Level {
-		&First {
-			display: flex;
-			flex-direction: column;
-			gap: 5px;
-		}
+	&LevelFirst {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+	}
 
-		&Second {
-			display: flex;
-			flex-direction: column;
-			gap: 5px;
-			padding-left: 1rem;
-		}
+	&LevelSecond {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		padding-left: 1rem;
+	}
 
-		&Third {
-			padding-left: 2rem;
-		}
+	&LevelThird {
+		padding-left: 2rem;
 	}
 
 	&Link {

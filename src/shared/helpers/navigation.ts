@@ -1,4 +1,4 @@
-import { Navigation, NavigationItem, NavigationRoute } from '@shared/types/types';
+import { Navigation, NavigationItem, NavigationRoute } from './types';
 
 const filterByChildrenLength = (item: Navigation | NavigationItem<NavigationRoute>) =>
 	item.children.length;
