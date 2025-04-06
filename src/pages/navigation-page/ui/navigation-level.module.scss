@@ -1,0 +1,41 @@
+@use "../../../shared/ui/styles/variables" as *;
+
+.navigation {
+	&LevelFirst {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+	}
+
+	&LevelSecond {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		padding-left: 1rem;
+	}
+
+	&LevelThird {
+		padding-left: 2rem;
+	}
+
+	&Link {
+		position: relative;
+		color: $main-color;
+		text-decoration: none;
+
+		&::before {
+			position: absolute;
+			bottom: -2px;
+			left: 0;
+			width: 0;
+			height: 1px;
+			content: '';
+			background-color: $main-color;
+			transition: width 0.2s;
+		}
+
+		&:hover::before {
+			width: 100%;
+		}
+	}
+}
