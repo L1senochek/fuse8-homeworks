@@ -1,0 +1,46 @@
+@use "../styles/mixins" as *;
+@use "../styles/variables" as *;
+
+.form {
+	gap: 8px;
+	min-width: 500px;
+	padding: 20px;
+	border: 1px solid $card-border;
+	border-radius: 8px;
+	@include flex(column, center);
+
+	&Field {
+		gap: 10px;
+		width: 100%;
+		@include flex(column, center, flex-start);
+
+		&.row	{
+			flex-direction: row;
+			align-items: center;
+			justify-content: flex-start;
+		}
+	}
+
+	&Label {
+		font-size: 20px;
+	}
+
+	&Input {
+		box-sizing: border-box;
+		padding: 10px;
+		color: $main-color;
+		background-color: $button-background;
+		border: 1px solid $card-border;
+		border-radius: 4px;
+	}
+
+	&Input:not(&Checkbox, &Select) {
+		width: 100%;
+	}
+}
+
+.validation-error {
+	min-height: 14px;
+	font-size: 12px;
+	color: $error-color;
+}
