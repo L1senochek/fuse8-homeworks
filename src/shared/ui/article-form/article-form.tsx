@@ -1,5 +1,6 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { articleAPI } from '@shared/api/article-api';
+import { routes } from '@shared/services/routes';
 import { Button } from '@shared/ui';
 import { schema } from '@shared/ui/article-form/zod-schema';
 import { useMutation } from '@tanstack/react-query';
@@ -27,7 +28,7 @@ export function ArticleForm() {
 		mutationKey: ['createArticle'],
 		mutationFn: articleAPI.createArticle,
 		onSuccess: () => {
-			navigate('/articles');
+			navigate(routes.articles.pathname);
 		},
 	});
 
