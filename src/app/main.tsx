@@ -13,7 +13,15 @@ import { BrowserRouter, Route, Routes } from 'react-router';
 
 import './index.css';
 
-const queryClient = new QueryClient();
+const STALE_TIME = 30 * 1000;
+
+const queryClient = new QueryClient({
+	defaultOptions: {
+		queries: {
+			staleTime: STALE_TIME,
+		},
+	},
+});
 
 createRoot(document.getElementById('root')!).render(
 	<StrictMode>
