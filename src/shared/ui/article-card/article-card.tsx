@@ -1,27 +1,13 @@
-import { articleAPI } from '@shared/api/article-api';
 import { Article } from '@shared/api/types';
 import { capitalize } from '@shared/helpers/functions';
 import { Button } from '@shared/ui';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { useDeleteArticle } from '@shared/ui/article-card/use-delete-article';
 import cl from 'classnames';
 
 import styles from './article-card.module.scss';
 
 export function ArticleCard({ article }: { article: Article }) {
-	const queryClient = useQueryClient();
-	const { mutate, isPending } = useMutation({
-		mutationKey: ['deleteArticle'],
-		mutationFn: (id: string) => articleAPI.deleteArticle(id),
-		onSuccess: () => {
-			queryClient.setQueryData(['getArticles'], (articles: Article[]) =>
-				articles.filter((articleItem) => articleItem.id !== article.id),
-			);
-		},
-	});
-
-	function deleteArticle() {
-		mutate(article.id);
-	}
+	const { deleteArticle, isPending } = useDeleteArticle(article.id);
 
 	return (
 		<div

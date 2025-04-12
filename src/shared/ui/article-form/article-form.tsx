@@ -1,13 +1,10 @@
 import { zodResolver } from '@hookform/resolvers/zod';
-import { articleAPI } from '@shared/api/article-api';
-import { routes } from '@shared/services/routes';
+import { ArticleSchema } from '@shared/api/types';
 import { Button } from '@shared/ui';
+import { useCreateArticle } from '@shared/ui/article-form/use-create-article';
 import { schema } from '@shared/ui/article-form/zod-schema';
-import { useMutation } from '@tanstack/react-query';
 import cl from 'classnames';
-import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router';
-import { z } from 'zod';
+import { FieldError, useForm } from 'react-hook-form';
 
 import styles from './article-form.module.scss';
 
@@ -16,28 +13,16 @@ export function ArticleForm() {
 		register,
 		handleSubmit,
 		formState: { errors, isValid },
-	} = useForm({
+	} = useForm<ArticleSchema>({
 		defaultValues: { content: { type: 'draft' } },
 		resolver: zodResolver(schema),
 		mode: 'onChange',
 	});
 
-	const navigate = useNavigate();
-
-	const { isPending, mutate } = useMutation({
-		mutationKey: ['createArticle'],
-		mutationFn: articleAPI.createArticle,
-		onSuccess: () => {
-			navigate(routes.articles.pathname);
-		},
-	});
-
-	function onSubmit(data: z.infer<typeof schema>) {
-		mutate(data);
-	}
+	const { onSubmit, isPending } = useCreateArticle();
 
 	return (
-		<form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+		<form onSubmit={handleSubmit((data) => onSubmit(data))} className={styles.form}>
 			<div className={styles.formField}>
 				<label className={styles.formLabel} htmlFor={'title'}>
 					Title
@@ -75,7 +60,9 @@ export function ArticleForm() {
 					{...register('content.description')}
 				/>
 				<span className={styles['validation-error']}>
-					{errors.content?.description && errors.content.description.message}
+					{errors.content &&
+						'description' in errors.content &&
+						(errors.content.description as FieldError).message}
 				</span>
 			</div>
 			<div className={cl(styles.formField, styles.row)}>

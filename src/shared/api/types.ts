@@ -1,3 +1,6 @@
+import { schema } from '@shared/ui/article-form/zod-schema';
+import { z } from 'zod';
+
 export interface Post {
 	userId: number;
 	id: number;
@@ -24,3 +27,5 @@ export type UpdateArticle = {
 	title: string;
 	content: ArticleContent;
 };
+
+export type ArticleSchema = z.infer<typeof schema>;
