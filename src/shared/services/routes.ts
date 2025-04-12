@@ -17,4 +17,12 @@ export const routes: IRoutes = {
 		getLink: () => '/navigation',
 		pathname: '/navigation',
 	},
+	article: {
+		getLink: () => '/article',
+		pathname: '/article',
+	},
+	articles: {
+		getLink: () => '/articles',
+		pathname: '/articles',
+	},
 };
